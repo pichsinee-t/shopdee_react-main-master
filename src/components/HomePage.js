@@ -21,6 +21,7 @@ import {
   ListItemText,
   Menu,
   MenuItem,
+  Box,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
@@ -128,7 +129,7 @@ const HomePage = () => {
   return (
     <div>
       {/* Header */}
-      <AppBar position="static" sx={{ backgroundColor: "#1976d2" }}>
+      <AppBar position="static" sx={{ backgroundColor: "#FFD700" }}>
         <Toolbar>
           <img src="logo.webp" alt="Shopdee Logo" style={{ height: 50, marginRight: 16 }} />
           <div
@@ -176,6 +177,16 @@ const HomePage = () => {
         </Toolbar>
       </AppBar>
 
+      {/* Banner */}
+      <Box sx={{ backgroundColor: "#f5f5f5", padding: 4, textAlign: "center" }}>
+        <Typography variant="h3" gutterBottom>
+          ยินดีต้อนรับสู่ Shopdee
+        </Typography>
+        <Typography variant="h6">
+          แหล่งรวมสินค้าคุณภาพในราคาที่ดีที่สุด
+        </Typography>
+      </Box>
+
       {/* Best Sellers Section */}
       <Container sx={{ mt: 4 }}>
         <Typography variant="h4" gutterBottom>
@@ -199,9 +210,8 @@ const HomePage = () => {
                   </Typography>
                   <Button
                     variant="contained"
-                    color="primary"
+                    sx={{ backgroundColor: "#FFD700", color: "black", mt: 1 }}
                     fullWidth
-                    sx={{ mt: 1 }}
                     onClick={(e) => {
                       e.stopPropagation();
                       addToCart(product);

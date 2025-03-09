@@ -132,7 +132,7 @@ const ProductDetail = () => {
   return (
     <div>
       {/* Header */}
-      <AppBar position="static" sx={{ backgroundColor: "#1976d2" }}>
+      <AppBar position="static" sx={{ backgroundColor: "#FFD700" }}>
         <Toolbar>
           <img src="logo.webp" alt="Shopdee Logo" style={{ height: 50, marginRight: 16 }} />
           <div
@@ -197,9 +197,8 @@ const ProductDetail = () => {
             </Typography>
             <Button
               variant="contained"
-              color="primary"
+              sx={{ backgroundColor: "#FFD700", color: "black", mt: 1 }}
               fullWidth
-              sx={{ mt: 1 }}
               onClick={() => addToCart(product)}
             >
               เพิ่มลงตะกร้า
